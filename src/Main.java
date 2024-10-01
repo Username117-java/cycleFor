@@ -49,7 +49,7 @@ public class Main {
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         double cashSavings = 15000;
         month = 1;
-        while (cashSavings <12_000_000){
+        while (cashSavings < 12_000_000) {
             cashSavings *= 1.07;
             String cashSavingsKopeyki = decimalFormat.format(cashSavings);
             System.out.println("Месяц " + month + " сумма накоплений равна " + cashSavingsKopeyki + " рублей");
@@ -61,25 +61,27 @@ public class Main {
 
         cashSavings = 15000;
         month = 1;
-                while (cashSavings <12_000_000){
+        while (cashSavings < 12_000_000) {
             cashSavings *= 1.07;
             String cashSavingsKopeyki = decimalFormat.format(cashSavings);
-            if (month%6==0){
-            System.out.println("Месяц " + month + " сумма накоплений равна " + cashSavingsKopeyki + " рублей");}
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений равна " + cashSavingsKopeyki + " рублей");
+            }
             month++;
         }
 
         System.out.println();
         System.out.println("Задача 6");
 
-        int nineYears = 9*12;
+        int nineYears = 9 * 12;
         cashSavings = 15000;
         month = 1;
-        while (month<=nineYears){
+        while (month <= nineYears) {
             cashSavings *= 1.07;
             String cashSavingsKopeyki = decimalFormat.format(cashSavings);
-            if (month%6==0){
-                System.out.println("Месяц " + month + " сумма накоплений равна " + cashSavingsKopeyki + " рублей");}
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений равна " + cashSavingsKopeyki + " рублей");
+            }
             month++;
         }
 
@@ -88,9 +90,9 @@ public class Main {
 
         int firstFriday = 3;
         int day = 1;
-        while (day<=31){
-            if (day%7==firstFriday) {
-                System.out.println("Сегодня пятница, "+day+"-е число. Необходимо подготовить отчет");
+        while (day <= 31) {
+            if (day % 7 == firstFriday) {
+                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
             }
             day++;
         }
@@ -101,14 +103,12 @@ public class Main {
         year = 0;
         int beginningOfTheObservation = 2024 - 200;
         int endOfTheObservation = 2024 + 100;
-        while (year<=endOfTheObservation){
-            if (year>=beginningOfTheObservation && year%79==0) {
+        while (year <= endOfTheObservation) {
+            if (year >= beginningOfTheObservation && year % 79 == 0) {
                 System.out.println(year);
             }
             year++;
         }
-
-
 
 
     }
