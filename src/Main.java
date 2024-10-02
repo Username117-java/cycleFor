@@ -2,22 +2,26 @@ import java.text.DecimalFormat;
 
 public class Main {
     public static void main(String[] args) {
+        DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
         System.out.println("Задача 1");
 
         int salary = 15000;
-        int total = 0;
-        int month = 0;
+        double total = 0;
+        int month = 1;
         while (total < 2459000) {
-            month++;
+            total *= 1.01;
             total += salary;
+            String totalKopeyki = decimalFormat.format(total);
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalKopeyki + " рублей");
+            month++;
         }
-        System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+
 
         System.out.println();
         System.out.println("Задача 2");
 
-        int count = 0;
+        int count = 1;
         while (count <= 10) {
             System.out.print(count + " ");
             count++;
@@ -46,7 +50,7 @@ public class Main {
         System.out.println();
         System.out.println("Задача 4");
 
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
         double cashSavings = 15000;
         month = 1;
         while (cashSavings < 12_000_000) {
@@ -88,13 +92,10 @@ public class Main {
         System.out.println();
         System.out.println("Задача 7");
 
-        int firstFriday = 3;
-        int day = 1;
-        while (day <= 31) {
-            if (day % 7 == firstFriday) {
-                System.out.println("Сегодня пятница, " + day + "-е число. Необходимо подготовить отчет");
-            }
-            day++;
+        int friday = 3;
+        while (friday <= 31) {
+            System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
+            friday += 7;
         }
 
         System.out.println();
